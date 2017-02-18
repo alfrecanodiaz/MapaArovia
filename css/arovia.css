@@ -1,0 +1,149 @@
+.leaflet-zoom-animated g path {
+    fill-opacity: 0.6;
+    stroke-opacity: 0.8;
+}
+/*.poligono0{fill: #a6cee3; stroke: #7794A3;}
+.poligono1{fill: #B2DF8A; stroke: #7F9F63;}
+.poligono2{fill: #33a02c; stroke: #1F601A;}
+.poligono3{fill: #fb9a99; stroke: #BB7372;}
+.poligono4{fill: #0F3B82; stroke: #081E42;}
+.poligono5{fill: #FF6600; stroke: #BF4C00;}*/
+.page-content > .row {
+    margin-top: 0;
+}
+.parent-row {
+    margin-top: 0;
+}
+.a-map-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.parent-map {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#map {
+    width: 100%;
+    height: 600px;
+    margin:0;
+    padding:0;
+}
+#modal-map-content .img-content-map {
+    width: 100%;
+    height: auto;
+}
+
+.map-layer-1 {z-index: 9999;}
+.map-layer-2 {z-index: 500;}
+
+/*******************************
+* Header - Nav Bar
+*******************************/
+.navbar {
+    margin-bottom: 0;
+}
+
+.header {
+    background-color: #20c55a;
+}
+
+.header .logo h1 {
+    padding-bottom: 0;
+}
+
+.header .form {
+    margin-bottom: 0;
+}
+
+#navbar {margin-top: 10px;}
+
+nav.navbar-findcond { background: #fff; border-color: #ccc; box-shadow: 0 0 2px 0 #ccc; }
+/* Titulo izquierda */
+nav.navbar-findcond a { color: #333; }
+/* Texto derecha, menu*/
+nav.navbar-findcond ul.navbar-nav a { color: #333; border-style: solid; border-width: 0 0 2px 0; border-color: #fff; }
+nav.navbar-findcond ul.navbar-nav a:hover,
+nav.navbar-findcond ul.navbar-nav a:visited,
+nav.navbar-findcond ul.navbar-nav a:focus,
+nav.navbar-findcond ul.navbar-nav a:active { background: #fff; }
+/* Underline menu */
+nav.navbar-findcond ul.navbar-nav a:hover { border-color: #199946; }
+nav.navbar-findcond li.divider { background: #ccc; }
+nav.navbar-findcond button.navbar-toggle { background: #199946; border-radius: 2px; }
+nav.navbar-findcond button.navbar-toggle:hover { background: #999; }
+nav.navbar-findcond button.navbar-toggle > span.icon-bar { background: #fff; }
+nav.navbar-findcond ul.dropdown-menu { border: 0; background: #fff; border-radius: 4px; margin: 4px 0; box-shadow: 0 0 4px 0 #ccc; }
+nav.navbar-findcond ul.dropdown-menu > li > a { color: #444; }
+/* Hover dropdown */
+nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color: #fff; }
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus { background-color: #eee;border-color: #199946;  }
+
+/*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+*******************************/
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    /*width: 320px;*/
+    width:450px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog{
+    left: -320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog{
+    left: 0;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: -320px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+    border-radius: 0;
+    border: none;
+}
+
+.modal-header {
+    border-bottom-color: #EEEEEE;
+    background-color: #FAFAFA;
+}
+
+.modal-backdrop {
+    background-color: transparent;
+}

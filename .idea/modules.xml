@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../mapa-arovia/.idea/arovia.iml" filepath="$PROJECT_DIR$/../mapa-arovia/.idea/arovia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/arovia.iml" filepath="$PROJECT_DIR$/.idea/arovia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mapa-arovia.iml" filepath="$PROJECT_DIR$/.idea/mapa-arovia.iml" />
     </modules>
   </component>
 </project>
