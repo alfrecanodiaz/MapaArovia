@@ -29,13 +29,6 @@
     margin:0;
     padding:0;
 }
-#modal-map-content .img-content-map {
-    width: 100%;
-    height: auto;
-}
-
-.map-layer-1 {z-index: 9999;}
-.map-layer-2 {z-index: 500;}
 
 /*******************************
 * Header - Nav Bar
@@ -89,6 +82,7 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color
     margin: auto;
     /*width: 320px;*/
     width:450px;
+    max-width: 450px;
     height: 100%;
     -webkit-transform: translate3d(0%, 0, 0);
     -ms-transform: translate3d(0%, 0, 0);
@@ -104,8 +98,11 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color
 
 .modal.left .modal-body,
 .modal.right .modal-body {
-    padding: 15px 15px 80px;
+    /*padding: 15px 15px 80px;*/
+    padding: 5px 5px 25px;
+    /*padding: 0 15px 15px;*/
 }
+
 
 /*Left*/
 .modal.left.fade .modal-dialog{
@@ -140,10 +137,62 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color
 }
 
 .modal-header {
+    background-color: #199946;
+    border-bottom: 3px solid #16893F;
+}
+
+#modal-map-title h2 {
+    color: #FFFFFF;
+}
+
+.img-content-map {
+    border: 1px solid #d3d3d3;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+/*#modal-map-content .img-content-map {
+    width: 100%;
+    height: auto;
+}*/
+
+.tab-content img {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+/*.modal-header {
     border-bottom-color: #EEEEEE;
     background-color: #FAFAFA;
-}
+}*/
 
 .modal-backdrop {
     background-color: transparent;
+}
+
+.modal-header{min-width: 433px; max-width: 433px;}
+.modal-body{min-width: 433px; max-width: 433px;}
+
+.tabbable {
+    padding: 2px;
+    min-width: 423px; max-width: 423px;
+}
+
+.tab-content .tab-content {width: 100%!important;}
+.tab-content .tab-content .tab-pane {width: 100%!important;}
+
+#modal-map-content .tabbable .tab-content table tbody tr td {
+    vertical-align: middle;
+}
+.tabbable .tab-content {
+    /*border: 1px solid #d3d3d3;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*border-bottom: 0;*/
+}
+
+.nav-tabs {
+    border-bottom: 0;
 }
