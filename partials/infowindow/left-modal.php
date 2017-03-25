@@ -4,13 +4,58 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Left Sidebar</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times-circle close-modal-map" aria-hidden="true"></i>
+                </button>
+                <h2 class="modal-title" id="myModalLabel">Filtros</h2>
             </div>
 
             <div class="modal-body">
-                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </p>
+                <div style="text-align: center">
+                    <h4 class="leftmodal-title-top">Modo de visualización</h4>
+                </div>
+                <div class="form-group map-view-mode">
+                    <div class="radio">
+                        <input type="radio" id="map-rb-distritos" name="radio" />
+                        <label for="map-rb-distritos"><span></span>Distritos</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="map-rb-comunidades" name="radio" />
+                        <label for="map-rb-comunidades"><span></span>Comunidades</label>
+                    </div>
+                </div>
+                <div class="ui_space20"></div>
+                <div class="leftmodal-body-subtitle leftmodal-body-subtitle-proyectos">
+                    <h4 class="leftmodal-title leftmodal-title-proyectos">Proyectos</h4>
+                </div>
+                <div class="leftmodal-body-content">
+                    <p>Actores público y privados comprometidos con la inversión social en el país.</p>
+                    <a id="map-filter-proyectos" class="btn btn-warning btn-outline map-filter-btn">Ver en Mapa</a>
+                </div>
+                <div class="ui_space20"></div>
+                <div class="leftmodal-body-subtitle leftmodal-body-subtitle-servicios">
+                    <h4 class="leftmodal-title leftmodal-title-servicios">Servicios Sociales</h4>
+                </div>
+                <div class="leftmodal-body-content">
+                    <p>Intervenciones sociales adelantadas por públicos y privados</p>
+                    <a id="map-filter-servicios" class="btn btn-primary btn-outline map-filter-btn">Ver en Mapa</a>
+                </div>
+                <div class="ui_space20"></div>
+                <div class="leftmodal-body-subtitle leftmodal-body-subtitle-comites">
+                    <h4 class="leftmodal-title leftmodal-title-comites">Comités </h4>
+                </div>
+                <div class="leftmodal-body-content">
+                    <p>Iniciativas nacionales e internacionales replicables por sus resultados favorables</p>
+                    <a id="map-filter-comites" class="btn btn-success btn-outline map-filter-btn">Ver en Mapa</a>
+                </div>
+                <div class="ui_space20"></div>
+                <div class="leftmodal-body-subtitle leftmodal-body-subtitle-voluntarios">
+                    <h4 class="leftmodal-title leftmodal-title-voluntarios">Voluntarios</h4>
+                </div>
+                <div class="leftmodal-body-content">
+                    <p>Los voluntarios son los jóvenes profesionales que implementan la estrategia de intervención social del programa</p>
+                    <a id="map-filter-voluntarios" class="btn btn-danger btn-outline map-filter-btn">Ver en Mapa</a>
+                </div>
             </div>
 
         </div><!-- modal-content -->

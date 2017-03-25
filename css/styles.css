@@ -26,13 +26,14 @@ footer{
 }
 
 footer a{
-   color:#eee;
+   /*color:#eee;*/
    text-decoration:none;
-   border-bottom:1px dotted #888;
+   /*border-bottom:1px dotted #888;*/
 }
 
 footer a:hover{
-   color:#aaa;
+   /*color:#aaa;*/
+   color: #20c55a;
    text-decoration:none;
    border:0px;
 }

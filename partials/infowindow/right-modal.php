@@ -4,7 +4,10 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    <i class="fa fa-times-circle close-modal-map" aria-hidden="true"></i>
+                </button>
                 <div id="modal-map-title"></div>
                 <h4 class="modal-title"></h4>
             </div>
