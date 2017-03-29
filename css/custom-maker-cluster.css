@@ -1,0 +1,49 @@
+.cluster-proyectos {
+    background-color: rgba(240, 173, 78, 0.6);
+}
+.cluster-proyectos div {
+    background-color: rgba(214, 155, 70, 0.6);
+}
+
+.cluster-servicios {
+    background-color: rgba(66, 139, 202, 0.6);
+}
+
+.cluster-servicios div {
+    background-color: rgba(58, 121, 176, 0.6);
+}
+
+.cluster-comites {
+    background-color: rgba(92, 184, 92, 0.6);
+}
+
+.cluster-comites div {
+    background-color: rgba(80, 159, 80, 0.6);
+}
+
+.cluster-voluntarios {
+    background-color: rgba(217, 83, 79, 0.6);
+}
+
+.cluster-voluntarios div {
+    background-color: rgba(191, 73, 70, 0.6);
+}
+
+.cluster-proyectos, .cluster-comites, .cluster-servicios, .cluster-voluntarios {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+
+.cluster-proyectos div, .cluster-comites div, .cluster-servicios div, .cluster-voluntarios div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.cluster-proyectos span, .cluster-comites span, .cluster-servicios span, .cluster-voluntarios span {
+    line-height: 30px;
+}

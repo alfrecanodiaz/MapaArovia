@@ -30,7 +30,14 @@ $(document).ready(function() {
     });
 
     function addAsentamientos(status) {
+        if (status == 0) {
+            showLoader();
+            layerGroupMain.clearLayers();
+        }
         $.getJSON("http://geo.stp.gov.py/user/arovia/api/v2/sql?format=GeoJSON&q=SELECT * FROM datos_por_asentamiento", function(data) {
+            if (status == 0) {
+                hideLoader();
+            }
             var markers = L.markerClusterGroup();
             var datosPorAsentamiento = L.geoJson(data, {
                 style: ComunidadesMapStyle,
@@ -75,13 +82,12 @@ $(document).ready(function() {
                         "</table>";
 
                     layer.on('click', function (e) {
+                        $("#modal-map-title").html(title);
                         $("#option-tab-2").removeClass("active");
-                        $("#tab-content-2").removeClass("active");
+                        $("#tab-content-2").removeClass("active").html(content_tab_2);
                         $("#option-tab-1").addClass("active");
-                        $("#tab-content-1").addClass("active");
-                        document.getElementById("modal-map-title").innerHTML = title;
-                        document.getElementById("tab-content-1").innerHTML = content_tab_1;
-                        document.getElementById("tab-content-2").innerHTML = content_tab_2;
+                        $("#tab-content-1").addClass("active").html(content_tab_1);
+                        map.setView(e.latlng, 9);
                         $("#infoMapRight").modal();
                     });
 
@@ -89,16 +95,25 @@ $(document).ready(function() {
             });
             markers.addLayer(datosPorAsentamiento);
             markers.addTo(layerGroupMain);
-            console.log(status);
+            // console.log(status);
             if (status == 1) {
-                addDistritos();
+                addDistritos(1);
             }
         });
     }
 
-    function addDistritos() {
-
+    function addDistritos(status) {
+        // console.log(status);
+        if (status == 0) {
+            showLoader();
+            layerGroupMain.clearLayers();
+        }
         $.getJSON("http://geo.stp.gov.py/user/arovia/api/v2/sql?format=GeoJSON&q=SELECT * FROM datos_por_distrito", function(data) {
+            if (status == 1) {
+                hideLoader();
+            } else if (status == 0) {
+                hideLoader();
+            }
             var datosPorDistrito = L.geoJson(data, {
                 onEachFeature: function (feature, layer) {
 
@@ -161,6 +176,7 @@ $(document).ready(function() {
                         $("#tab-content-2").removeClass("active").html(content_tab_2);
                         $("#option-tab-1").addClass("active");
                         $("#tab-content-1").addClass("active").html(content_tab_1);
+                        map.setView(e.latlng, 9);
                         $("#infoMapRight").modal();
                     });
 
@@ -231,51 +247,193 @@ $(document).ready(function() {
         };
     }
     
-    $('#remove_layers').click(function() {
+    /*$('#remove_layers').click(function() {
       layerGroupMain.clearLayers();
-    });
+    });*/
 
     $('#ui-filtros-parent').click(function() {
         $("#infoMapLeft").modal();
     });
 
+    $('.map-filter-rb').click(function () {
+       switch (this.id) {
+           case "map-rb-distritos":
+               addDistritos(0);
+               break;
+           case "map-rb-comunidades":
+               addAsentamientos(0);
+               break
+       }
+    });
+
     $('.map-filter-btn').click(function() {
         var query;
+        var maker_class;
         switch (this.id) {
             case "map-filter-proyectos":
                 query = "proyectos_por_distritos";
-                queryFilterMap(query);
+                maker_class = "cluster-proyectos";
+                queryFilterMap(query, maker_class);
                 break;
             case "map-filter-servicios":
                 query = "servicios_por_distrito";
-                queryFilterMap(query);
+                maker_class = "cluster-servicios";
+                queryFilterMap(query, maker_class);
                 break;
             case "map-filter-comites":
                 query = "comites_por_distritos";
-                queryFilterMap(query);
+                maker_class = "cluster-comites";
+                queryFilterMap(query, maker_class);
                 break;
             case "map-filter-voluntarios":
                 query = "voluntarios_por_distritos";
-                queryFilterMap(query);
+                maker_class = "cluster-voluntarios";
+                queryFilterMap(query, maker_class);
                 break;
         }
     });
     
-    function queryFilterMap(query) {
+    function queryFilterMap(query, maker_class) {
+        showLoader();
+        clearCheckedFilters();
         layerGroupMain.clearLayers();
-        /*console.log("tiene el layer; " + map.hasLayer(dataFilter));
-        if (map.hasLayer(dataFilter)) {
-            map.removeLayer(dataFilter);
-        }*/
-        /*map.eachLayer(function (layer) {
-            console.dir(layer);
-        });*/
         $.getJSON("http://geo.stp.gov.py/user/arovia/api/v2/sql?format=GeoJSON&q=SELECT * FROM " + query, function(data) {
-            var markers = L.markerClusterGroup();
+            hideLoader();
+            var markers = new L.markerClusterGroup({
+                iconCreateFunction: function (cluster) {
+                    var childCount = cluster.getChildCount();
+                    /*var c = ' marker-cluster-';
+                    if (childCount < 10) {
+                        c += 'small';
+                    } else if (childCount < 100) {
+                        c += 'medium';
+                    } else {
+                        c += 'large';
+                    }*/
+                    return new L.DivIcon({
+                        html: '<div><span>' + childCount + '</span></div>', className: maker_class, iconSize: new L.Point(40, 40)
+                    });
+                }
+            });
              var dataFilter = L.geoJson(data, {
                 onEachFeature: function (feature, layer) {
 
-                    console.dir(feature);
+                    var content;
+                    // console.dir(feature.properties);
+
+                    switch (query) {
+                        case "proyectos_por_distritos":
+                            content =
+                                "<article class='infobox_map infobox_proyectos'>" +
+                                "<header class='infobox_header'>" +
+                                "<h3 class='infobox_title'>" + feature.properties.nombre_del_proyecto + "</h3>" +
+                                "<p class='infobox_item'> Ubicación </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.comunidad + "</h4>" +
+                                "<p class='infobox_item'> Instituciones </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.institucion + "</h4>" +
+                                "<div class='row'>"+
+                                "<div class='col-sm-6'>" +
+                                "<p class='infobox_item'> Objetivo </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.objetivo + "</h4>" +
+                                "</div>" +
+                                "<div class='col-sm-6 col-border'>" +
+                                "<p class='infobox_item'> Monto Solicitado </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.monto_solicitado + "</h4>" +
+                                "</div>" +
+                                "</div>" +
+                                "<div class='text-center'>" +
+                                "<p class='infobox_item'> Beneficiarios </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.beneficiarios + "</h4>" +
+                                "</div>" +
+                                "</header>" +
+                                "</article>";
+
+                            layer.bindPopup(content);
+                            break;
+
+                        case "servicios_por_distrito":
+                            content =
+                                "<article class='infobox_map infobox_servicios'>" +
+                                "<header class='infobox_header'>" +
+                                "<h3 class='infobox_title'>" + feature.properties.programa + "</h3>" +
+                                "<p class='infobox_item'> Ubicación </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.comunidad + "</h4>" +
+                                "<p class='infobox_item'> Institución </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.institucion + "</h4>" +
+                                "<div class='row'>"+
+                                "<div class='col-sm-6'>" +
+                                "<p class='infobox_item'> Unidad de Medida </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.unidad_de_medida + "</h4>" +
+                                "<p class='infobox_item'> Cantidad </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.cantidad + "</h4>" +
+                                "</div>" +
+                                "<div class='col-sm-6 col-border'>" +
+                                "<p class='infobox_item'> Observación </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.observacion + "</h4>" +
+                                "</div>" +
+                                "</div>" +
+                                "<div class='text-center'>" +
+                                "<p class='infobox_item'> Beneficiarios </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.beneficiarios + "</h4>" +
+                                "</div>" +
+                                "</header>" +
+                                "</article>";
+
+                            layer.bindPopup(content);
+                            break;
+
+                        case "comites_por_distritos":
+                            content =
+                                "<article class='infobox_map infobox_comites'>" +
+                                "<header class='infobox_header'>" +
+                                "<h3 class='infobox_title'>" + feature.properties.nombre + "</h3>" +
+                                "<p class='infobox_item'> Ubicación </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.distrito + "</h4>" +
+                                "<p class='infobox_item'> Objetivo del comité </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.objetivo_del_comite + "</h4>" +
+                                "<div class='row'>"+
+                                "<div class='col-sm-6'>" +
+                                "<p class='infobox_item'> Representante </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.representante + "</h4>" +
+                                "</div>" +
+                                "<div class='col-sm-6 col-border'>" +
+                                "<p class='infobox_item'> Número de Integrantes </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.nro_de_integrantes + "</h4>" +
+                                "</div>" +
+                                "</div>" +
+                                "<div class='text-center'>" +
+                                "<p class='infobox_item'> Rol de Arovia </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.rol_de_arovia + "</h4>" +
+                                "</div>" +
+                                "</header>" +
+                                "</article>";
+
+                            layer.bindPopup(content);
+                            break;
+
+                        case "voluntarios_por_distritos":
+                            content =
+                                "<article class='infobox_map infobox_voluntarios'>" +
+                                "<header class='infobox_header'>" +
+                                "<h3 class='infobox_title'>" + feature.properties.distrito + "</h3>" +
+                                "<p class='infobox_item'> Comunidad Asignada </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.comunidad_asignada + "</h4>" +
+                                "<div class='row'>"+
+                                "<div class='col-sm-6'>" +
+                                "<p class='infobox_item'> Nombre del Voluntario </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.nombre + "</h4>" +
+                                "</div>" +
+                                "<div class='col-sm-6 col-border'>" +
+                                "<p class='infobox_item'> Profesión </p>"+
+                                "<h4 class='infobox_property'>" + feature.properties.profesion + "</h4>" +
+                                "</div>" +
+                                "</div>" +
+                                "</header>" +
+                                "</article>";
+
+                            layer.bindPopup(content);
+                            break;
+                    }
 
                 },
                 pointToLayer: function (feature, latlng) {
@@ -292,6 +450,26 @@ $(document).ready(function() {
             markers.addLayer(dataFilter);
             markers.addTo(layerGroupMain);
         });
+    }
+
+    function clearCheckedFilters() {
+        $("#map-rb-distritos").prop('checked', false);
+        $("#map-rb-comunidades").prop('checked', false);
+    }
+
+    function hideLoader() {
+        $('#loader').fadeOut(1000);
+    }
+    function showLoader() {
+        $('#loader').fadeIn(1000);
+    }
+
+    function capitalize_first_letter(string) {
+        return String(string).charAt(0).toUpperCase() + string.slice(1);
+    }
+    
+    function remove_dashes_underscore(string) {
+        return string.replace(/_|-/g, " ");
     }
 
 });

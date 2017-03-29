@@ -16,11 +16,11 @@
                 </div>
                 <div class="form-group map-view-mode">
                     <div class="radio">
-                        <input type="radio" id="map-rb-distritos" name="radio" />
+                        <input type="radio" id="map-rb-distritos" class="map-filter-rb" name="radio" />
                         <label for="map-rb-distritos"><span></span>Distritos</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" id="map-rb-comunidades" name="radio" />
+                        <input type="radio" id="map-rb-comunidades" class="map-filter-rb" name="radio" />
                         <label for="map-rb-comunidades"><span></span>Comunidades</label>
                     </div>
                 </div>

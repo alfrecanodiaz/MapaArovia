@@ -1,10 +1,15 @@
 body, p {
-    font-family: 'Raleway', serif;
+    /*font-family: 'Raleway', serif;*/
+    font-family: "Open Sans",sans-serif;
     font-size: 14px;
 }
 
+h1, h2, h3, h4 {
+    font-family: "Open Sans",sans-serif;
+}
+
 #navbar a {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .text-color-arovia {color: #39df73;}
@@ -129,7 +134,8 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color
 .modal.left .modal-body,
 .modal.right .modal-body {
     /*padding: 15px 15px 80px;*/
-    padding: 5px 5px 25px;
+    /*padding: 5px 5px 25px;*/
+    padding: 5px 5px 5px;
     /*padding: 0 15px 15px;*/
 }
 
@@ -260,12 +266,13 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color
 .leftmodal-title.leftmodal-title-comites {color: #5cb85c;}
 .leftmodal-title.leftmodal-title-voluntarios {color: #d9534f;}
 
+.leftmodal-body-subtitle {background: rgb(247, 247, 247) !important;}
 .leftmodal-body-subtitle.leftmodal-body-subtitle-proyectos {border-top: 1px #f0ad4e solid; border-bottom: 1px #f0ad4e solid;}
 .leftmodal-body-subtitle.leftmodal-body-subtitle-servicios {border-top: 1px #428bca solid; border-bottom: 1px #428bca solid;}
 .leftmodal-body-subtitle.leftmodal-body-subtitle-comites {border-top: 1px #5cb85c solid; border-bottom: 1px #5cb85c solid;}
 .leftmodal-body-subtitle.leftmodal-body-subtitle-voluntarios {border-top: 1px #d9534f solid; border-bottom: 1px #d9534f solid;}
 
-#infoMapLeft .modal-body{min-width: 450px; max-width: 450px;}
+#infoMapLeft .modal-body{background: rgb(247, 247, 247) !important; min-width: 450px; max-width: 450px;}
 #infoMapLeft .modal-body h4{font-weight: 600;}
 
 /*******************************
@@ -278,10 +285,10 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color
     overflow: auto;
     white-space: nowrap;
     background-color: white !important;
-    top: 250px;
+    top: 230px;
     margin:0 auto;
     border:1px #CCCCCC solid;
-    padding: 10px;
+    padding: 12px;
     position: fixed;
     z-index: 1;
     cursor: pointer;
@@ -309,7 +316,7 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color
     display:none;
 }
 .map-view-mode input[type="radio"] + label {
-    font-size:16px;
+    font-size:15px;
 }
 .map-view-mode input[type="radio"] + label span {
     display:inline-block;
@@ -337,6 +344,123 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color
     -o-transition:background-color 0.4s linear;
     -moz-transition:background-color 0.4s linear;
     transition:background-color 0.4s linear;
+}
+
+/*******************************
+* Infobox
+*******************************/
+
+.leaflet-popup-content {
+    width: 300px !important;
+}
+
+.infobox_map {
+    padding: 2px;
+}
+
+.leaflet-popup-content p {
+    margin: 0;
+}
+
+.leaflet-popup-content-wrapper {
+    padding: 0;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+}
+
+.leaflet-popup-content {
+    margin: 0;
+}
+
+.infobox_map .infobox_header {
+    margin: 10px 8px;
+}
+
+.infobox_map.infobox_proyectos {
+    border-radius: 5px;
+    border-top: 5px #f0ad4e solid;
+}
+
+.infobox_map.infobox_servicios {
+    border-radius: 5px;
+    border-top: 5px #428bca solid;
+}
+
+.infobox_map.infobox_comites {
+    border-radius: 5px;
+    border-top: 5px #5cb85c solid;
+}
+
+.infobox_map.infobox_voluntarios {
+    border-radius: 5px;
+    border-top: 5px #d9534f solid;
+}
+
+.infobox_map .infobox_title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.6em;
+}
+
+.infobox_map .infobox_item {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 1px;
+}
+
+.infobox_map .infobox_property {
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.infobox_map .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.infobox_map .row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.infobox_map .col {
+    display: table-cell;
+}
+
+.infobox_map .col-border {
+    border-left: 1px solid rgba(0,0,0,0.4);
+}
+
+.infobox_proyectos .infobox_title {
+    color: #f0ad4e;
+}
+
+.infobox_servicios .infobox_title {
+    color: #428bca;
+}
+
+.infobox_comites .infobox_title {
+    color: #5cb85c;
+}
+
+.infobox_voluntarios .infobox_title {
+    color: #d9534f;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    right: 5px;
+    top: 8px;
+    color: #888;
+    font-size: 18px;
+    z-index: 2;
 }
 
 /*******************************
@@ -385,4 +509,51 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color
 .btn-warning.btn-outline:hover,
 .btn-danger.btn-outline:hover {
     color: #fff;
+}
+
+#loader {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: transparent;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.map-slider-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3em 0 0 -3em;
+    color: transparent;
+    font-size: 10px;
+    border-top: 0.5em solid rgba(0, 0, 0, 0.2);
+    border-right: 0.5em solid rgba(0, 0, 0, 0.2);
+    /*border-bottom: 0.5em solid #346366 !important;*/
+    border-bottom: 0.5em solid #1A1108 !important;
+    border-left: 0.5em solid rgba(0, 0, 0, 0.2);
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+
+.map-slider-loading, .map-slider-loading:after {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+
+.map-slider-loading-label {
+    /*color: #aaaaaa;*/
+    color: #1A1108;
+    font-weight: 500;
+    position: absolute;
+    margin: -3em 0 0 -3em;
+    top: 70%;
+    left: 51.6%;
 }
