@@ -269,31 +269,33 @@ $(document).ready(function() {
     $('.map-filter-btn').click(function() {
         var query;
         var maker_class;
+        var maker_color;
         switch (this.id) {
             case "map-filter-proyectos":
                 query = "proyectos_por_distritos";
                 maker_class = "cluster-proyectos";
-                queryFilterMap(query, maker_class);
+                maker_color = 'orange';
                 break;
             case "map-filter-servicios":
                 query = "servicios_por_distrito";
                 maker_class = "cluster-servicios";
-                queryFilterMap(query, maker_class);
+                maker_color = 'blue';
                 break;
             case "map-filter-comites":
+                maker_color = 'green';
                 query = "comites_por_distritos";
                 maker_class = "cluster-comites";
-                queryFilterMap(query, maker_class);
                 break;
             case "map-filter-voluntarios":
+                maker_color = 'red';
                 query = "voluntarios_por_distritos";
                 maker_class = "cluster-voluntarios";
-                queryFilterMap(query, maker_class);
                 break;
         }
+        queryFilterMap(query, maker_class, maker_color);
     });
     
-    function queryFilterMap(query, maker_class) {
+    function queryFilterMap(query, maker_class, maker_color) {
         showLoader();
         clearCheckedFilters();
         layerGroupMain.clearLayers();
@@ -440,7 +442,8 @@ $(document).ready(function() {
                     return L.marker(latlng, {
                         icon: L.AwesomeMarkers.icon({
                             icon: 'map-marker',
-                            markerColor: 'cadetblue',
+                            // markerColor: 'cadetblue',
+                            markerColor: maker_color,
                             prefix: 'fa',
                             spin: false
                         })
