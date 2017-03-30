@@ -13,9 +13,9 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="http://www.arovia.gov.py/index.php/arovia/quienes-somos" target="_blank">Informaciòn</a>
+                    <a href="http://www.arovia.gov.py/index.php/arovia/quienes-somos" target="_blank"><i class="info-nav fa fa-info"></i>&nbsp;&nbsp;Informaciòn</a>
                 </li>
-                <li><a href="http://www.arovia.gov.py/index.php/voluntariado" target="_blank">Voluntariado</a></li>
+                <li><a href="http://www.arovia.gov.py/index.php/voluntariado" target="_blank"><i class="vol-nav fa fa-street-view"></i>&nbsp;&nbsp;Voluntariado</a></li>
             </ul>
         </div>
     </div>

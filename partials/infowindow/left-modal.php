@@ -15,7 +15,7 @@
                     <h4 class="leftmodal-title-top">Modo de visualización</h4>
                 </div>
                 <div id="div_reset_map" class="pull-right hide_reset_btn">
-                    <a id="btn_reset_map" class="btn btn-default">Reiniciar Mapa</a>
+                    <a id="btn_reset_map" class="btn btn-default"><i class="fa fa-refresh"></i>&nbsp;&nbsp;Reiniciar Mapa</a>
                 </div>
                 <div class="form-group map-view-mode">
                     <div class="radio">

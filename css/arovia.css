@@ -37,12 +37,6 @@ footer p {
     color: white;
 }
 
-/*.poligono0{fill: #a6cee3; stroke: #7794A3;}
-.poligono1{fill: #B2DF8A; stroke: #7F9F63;}
-.poligono2{fill: #33a02c; stroke: #1F601A;}
-.poligono3{fill: #fb9a99; stroke: #BB7372;}
-.poligono4{fill: #0F3B82; stroke: #081E42;}
-.poligono5{fill: #FF6600; stroke: #BF4C00;}*/
 .page-content > .row {
     margin-top: 0;
 }
@@ -106,6 +100,18 @@ nav.navbar-findcond ul.dropdown-menu > li > a { color: #444; }
 /* Hover dropdown */
 nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #199946; color: #fff; }
 .nav .open>a, .nav .open>a:hover, .nav .open>a:focus { background-color: #eee;border-color: #199946;  }
+
+nav.navbar-findcond button.navbar-toggle:hover {
+    background: #199946;
+}
+
+.info-nav.fa.fa-info {
+    color: #199946;
+}
+
+.vol-nav.fa.fa-street-view {
+    color: #199946;
+}
 
 /*******************************
 * MODAL AS LEFT/RIGHT SIDEBAR

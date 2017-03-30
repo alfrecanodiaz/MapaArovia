@@ -2,74 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae09edab-e8aa-4ce8-b650-7a89188c0c2e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/css/simple-sidebar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/cartodb/css/cartodb.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/cartodb/js/cartodb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/animated.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/screen-reader.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_animated.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_screen-reader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/jQuery/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/MarkerCluster.Default.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/images/markers-matte.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/images/markers-matte@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/images/markers-plain.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/images/markers-shadow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/images/markers-shadow@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/images/markers-soft.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/images/markers-soft@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/leaflet.awesome-markers.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/css/leaflet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/js/leaflet-providers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/js/leaflet.awesome-markers.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/js/leaflet.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendors/leaflet/js/leaflet.markercluster.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/arovia.css" afterPath="$PROJECT_DIR$/css/arovia.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/header.php" afterPath="$PROJECT_DIR$/partials/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/infowindow/left-modal.php" afterPath="$PROJECT_DIR$/partials/infowindow/left-modal.php" />
     </list>
@@ -99,44 +33,12 @@
     <favorites_list name="mapa-arovia" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="369" column="58" lean-forward="false" selection-start-line="369" selection-start-column="58" selection-end-line="369" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arovia.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/arovia.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="418" column="18" lean-forward="false" selection-start-line="418" selection-start-column="18" selection-end-line="418" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>wait</find>
       <find>right</find>
-      <find>modal</find>
       <find>modal-header</find>
       <find>leftmodal-body-content</find>
       <find>outline</find>
@@ -164,6 +66,7 @@
       <find>filtro</find>
       <find>btn_reset_map</find>
       <find>proye</find>
+      <find>modal</find>
     </findStrings>
     <replaceStrings>
       <replace>hideLoader</replace>
@@ -209,11 +112,11 @@
         <option value="$PROJECT_DIR$/vendors/leaflet/css/leaflet.css" />
         <option value="$PROJECT_DIR$/vendors/leaflet/js/leaflet.markercluster.js" />
         <option value="$PROJECT_DIR$/css/custom-maker-cluster.css" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/partials/header.php" />
+        <option value="$PROJECT_DIR$/css/arovia.css" />
         <option value="$PROJECT_DIR$/partials/infowindow/left-modal.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/partials/header.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/css/arovia.css" />
       </list>
     </option>
   </component>
@@ -285,53 +188,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapa-arovia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapa-arovia" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infowindow" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapa-arovia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapa-arovia" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapa-arovia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapa-arovia" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,12 +296,12 @@
       <workItem from="1490484140236" duration="14646000" />
       <workItem from="1490661954165" duration="4701000" />
       <workItem from="1490747772895" duration="4639000" />
-      <workItem from="1490827850008" duration="8105000" />
+      <workItem from="1490827850008" duration="10446000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125876000" />
+    <option name="totallyTimeSpent" value="128217000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -457,9 +314,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15367647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15367647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -650,26 +507,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partials/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partials/infowindow/right-modal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/infowindow/left-modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="31" lean-forward="true" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -682,18 +523,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/partials/infowindow/left-modal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="369" column="58" lean-forward="false" selection-start-line="369" selection-start-column="58" selection-end-line="369" selection-end-column="58" />
+        <state relative-caret-position="17">
+          <caret line="1" column="108" lean-forward="false" selection-start-line="1" selection-start-column="108" selection-end-line="1" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/arovia.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="418" column="18" lean-forward="false" selection-start-line="418" selection-start-column="18" selection-end-line="418" selection-end-column="18" />
+        <state relative-caret-position="256">
+          <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="104" lean-forward="true" selection-start-line="17" selection-start-column="104" selection-end-line="17" selection-end-column="111" />
+          <folding>
+            <element signature="e#907#913#0#HTML" expanded="true" />
+            <element signature="e#913#919#0#HTML" expanded="true" />
+            <element signature="e#1092#1098#0#HTML" expanded="true" />
+            <element signature="e#1098#1104#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="96" column="49" lean-forward="false" selection-start-line="96" selection-start-column="49" selection-end-line="96" selection-end-column="49" />
           <folding />
         </state>
       </provider>
