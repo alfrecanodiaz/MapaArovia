@@ -9,8 +9,7 @@ $(document).ready(function() {
         zoom: 8,
         maxZoom: 11
     });
-    
-    // Create group for your layers and add it to the map
+
     var layerGroupMain = L.layerGroup().addTo(map);
 
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -22,7 +21,13 @@ $(document).ready(function() {
         var departamentos = L.geoJson(data, {
             onEachFeature: function (feature, layer) {
                 myGeoJson = L.geoJson(layer.toGeoJSON(), {
-                    style: DepartamentosMapStyle
+                    style: DepartamentosMapStyle,
+                    onEachFeature: function (feature, layer) {
+                        layer.on({
+                            mouseover: highlightFeature,
+                            mouseout: resetHighlight
+                        });
+                    }
                 }).addTo(map, 0);
             }
         });
@@ -32,6 +37,7 @@ $(document).ready(function() {
     function addAsentamientos(status) {
         if (status == 0) {
             showLoader();
+            show_reset_button();
             layerGroupMain.clearLayers();
         }
         $.getJSON("http://geo.stp.gov.py/user/arovia/api/v2/sql?format=GeoJSON&q=SELECT * FROM datos_por_asentamiento", function(data) {
@@ -106,6 +112,7 @@ $(document).ready(function() {
         // console.log(status);
         if (status == 0) {
             showLoader();
+            show_reset_button();
             layerGroupMain.clearLayers();
         }
         $.getJSON("http://geo.stp.gov.py/user/arovia/api/v2/sql?format=GeoJSON&q=SELECT * FROM datos_por_distrito", function(data) {
@@ -235,6 +242,49 @@ $(document).ready(function() {
         };
     }
 
+    function highlightFeature(e) {
+        var layer = e.target;
+        var fill_color;
+        var stroke_color;
+        switch (layer.feature.properties.dpto_desc) {
+            case "ALTO PARANA":
+                fill_color = "#93B7C9";
+                stroke_color = "#647D89";
+                break;
+            case "CAAGUAZU":
+                fill_color = "#9EC57A";
+                stroke_color = "#6B8553";
+                break;
+            case "CANINDEYU":
+                fill_color = "#2B8625";
+                stroke_color = "#174613";
+                break;
+            case "SAN PEDRO":
+                fill_color = "#E18A89";
+                stroke_color = "#A16362";
+                break;
+            case "ASUNCION":
+                fill_color = "#0C2F68";
+                stroke_color = "#061733";
+                break;
+            case "CENTRAL":
+                fill_color = "#E55C00";
+                stroke_color = "#A54200";
+                break;
+        }
+        layer.setStyle({
+            fillColor: fill_color,
+            weight: 4,
+            color: stroke_color,
+            dashArray: '3',
+            fillOpacity: 1
+        });
+    }
+
+    function resetHighlight(e) {
+        myGeoJson.resetStyle(e.target);
+    }
+
     function ComunidadesMapStyle(feature) {
         return {
             fillColor: "#6B0FB2",
@@ -246,10 +296,6 @@ $(document).ready(function() {
             className: "map-layer-2"
         };
     }
-    
-    /*$('#remove_layers').click(function() {
-      layerGroupMain.clearLayers();
-    });*/
 
     $('#ui-filtros-parent').click(function() {
         $("#infoMapLeft").modal();
@@ -298,20 +344,13 @@ $(document).ready(function() {
     function queryFilterMap(query, maker_class, maker_color) {
         showLoader();
         clearCheckedFilters();
+        show_reset_button();
         layerGroupMain.clearLayers();
         $.getJSON("http://geo.stp.gov.py/user/arovia/api/v2/sql?format=GeoJSON&q=SELECT * FROM " + query, function(data) {
             hideLoader();
             var markers = new L.markerClusterGroup({
                 iconCreateFunction: function (cluster) {
                     var childCount = cluster.getChildCount();
-                    /*var c = ' marker-cluster-';
-                    if (childCount < 10) {
-                        c += 'small';
-                    } else if (childCount < 100) {
-                        c += 'medium';
-                    } else {
-                        c += 'large';
-                    }*/
                     return new L.DivIcon({
                         html: '<div><span>' + childCount + '</span></div>', className: maker_class, iconSize: new L.Point(40, 40)
                     });
@@ -467,12 +506,15 @@ $(document).ready(function() {
         $('#loader').fadeIn(1000);
     }
 
-    function capitalize_first_letter(string) {
-        return String(string).charAt(0).toUpperCase() + string.slice(1);
+    function show_reset_button() {
+        var content = $('#div_reset_map');
+        if (content.hasClass('hide_reset_btn')) {
+            content.removeClass( 'hide_reset_btn' ).addClass( 'show_reset_btn' );
+        }
     }
-    
-    function remove_dashes_underscore(string) {
-        return string.replace(/_|-/g, " ");
-    }
+
+    $('#btn_reset_map').click(function() {
+        location.reload();
+    });
 
 });
