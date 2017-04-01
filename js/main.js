@@ -102,7 +102,6 @@ $(document).ready(function() {
             });
             markers.addLayer(datosPorAsentamiento);
             markers.addTo(layerGroupMain);
-            // console.log(status);
             if (status == 1) {
                 addDistritos(1);
             }
@@ -110,7 +109,6 @@ $(document).ready(function() {
     }
 
     function addDistritos(status) {
-        // console.log(status);
         if (status == 0) {
             showLoader();
             show_reset_button();
@@ -361,7 +359,6 @@ $(document).ready(function() {
                 onEachFeature: function (feature, layer) {
 
                     var content;
-                    // console.dir(feature.properties);
 
                     switch (query) {
                         case "proyectos_por_distritos":
@@ -528,8 +525,6 @@ $(document).ready(function() {
                 method: "GET",
                 url: "http://geo.stp.gov.py/user/arovia/api/v2/sql?q=SELECT * FROM "+value+" COUNT(cartodb_id)"
             }).done(function(data) {
-                // console.log(value);
-                // console.log(data.total_rows);
                 $('.count_'+value).text('Total: '+data.total_rows);
             }).fail(function() {
 
