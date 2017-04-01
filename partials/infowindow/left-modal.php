@@ -33,6 +33,7 @@
                 </div>
                 <div class="leftmodal-body-content">
                     <p>Actores público y privados comprometidos con la inversión social en el país.</p>
+                    <p class="count_proyectos_por_distritos"></p>
                     <a id="map-filter-proyectos" class="btn btn-warning btn-outline map-filter-btn">Ver en Mapa</a>
                 </div>
                 <div class="ui_space20"></div>
@@ -41,6 +42,7 @@
                 </div>
                 <div class="leftmodal-body-content">
                     <p>Intervenciones sociales adelantadas por públicos y privados</p>
+                    <p class="count_servicios_por_distrito"></p>
                     <a id="map-filter-servicios" class="btn btn-primary btn-outline map-filter-btn">Ver en Mapa</a>
                 </div>
                 <div class="ui_space20"></div>
@@ -49,6 +51,7 @@
                 </div>
                 <div class="leftmodal-body-content">
                     <p>Iniciativas nacionales e internacionales replicables por sus resultados favorables</p>
+                    <p class="count_comites_por_distritos"></p>
                     <a id="map-filter-comites" class="btn btn-success btn-outline map-filter-btn">Ver en Mapa</a>
                 </div>
                 <div class="ui_space20"></div>
@@ -57,6 +60,7 @@
                 </div>
                 <div class="leftmodal-body-content">
                     <p>Los voluntarios son los jóvenes profesionales que implementan la estrategia de intervención social del programa</p>
+                    <p class="count_voluntarios_por_distritos"></p>
                     <a id="map-filter-voluntarios" class="btn btn-danger btn-outline map-filter-btn">Ver en Mapa</a>
                 </div>
             </div>

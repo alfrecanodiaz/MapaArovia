@@ -31,6 +31,7 @@ $(document).ready(function() {
                 }).addTo(map, 0);
             }
         });
+        queryTotalsData();
         addAsentamientos(1);
     });
 
@@ -516,5 +517,25 @@ $(document).ready(function() {
     $('#btn_reset_map').click(function() {
         location.reload();
     });
+
+    function queryTotalsData() {
+
+        var tables = ["proyectos_por_distritos", "servicios_por_distrito", "comites_por_distritos", "voluntarios_por_distritos"];
+
+        tables.forEach(function(value) {
+
+            $.ajax({
+                method: "GET",
+                url: "http://geo.stp.gov.py/user/arovia/api/v2/sql?q=SELECT * FROM "+value+" COUNT(cartodb_id)"
+            }).done(function(data) {
+                // console.log(value);
+                // console.log(data.total_rows);
+                $('.count_'+value).text('Total: '+data.total_rows);
+            }).fail(function() {
+
+            });
+
+        });
+    }
 
 });

@@ -15,14 +15,17 @@
     <!-- Bootstrap -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="vendor/bootstrap/css/simple-sidebar.css" rel="stylesheet" />
-    <!-- styles -->
+    <!-- Styles -->
     <link href="css/styles.css" rel="stylesheet" />
-    <!-- Map -->
+    <!-- CartoDB -->
     <link rel="stylesheet" href="http://geo.stp.gov.py/dist/themes/css/cartodb.css" />
+    <!-- Leaflet -->
     <link rel="stylesheet" href="vendor/leaflet/css/MarkerCluster.Default.css" />
     <link rel="stylesheet" href="vendor/leaflet/css/leaflet.awesome-markers.css" />
     <link rel="stylesheet" href="css/custom-maker-cluster.css" />
+    <!-- FontAwesome -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom -->
     <link rel="stylesheet" href="css/arovia.css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -69,12 +72,13 @@
 
     </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!-- jQuery -->
   <script src="vendor/jQuery/jquery.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Bootstrap -->
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <!-- Map -->
+  <!-- CartoDB -->
   <script src="http://geo.stp.gov.py/cartodb.js/v3/3.15/cartodb.js"></script>
+  <!-- Leaflet -->
   <script src="vendor/leaflet/js/leaflet.markercluster.js"></script>
   <script src="vendor/leaflet/js/leaflet.awesome-markers.min.js"></script>
   <!-- Custom -->
