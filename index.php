@@ -38,7 +38,7 @@
   </head>
   <body>
 
-    <?php include 'partials/header.php' ?>
+    <?php require 'partials/header.php' ?>
 
     <div class="page-content">
 
@@ -64,7 +64,7 @@
     </div>
     </div>
 
-    <?php include 'partials/footer.php' ?>
+    <?php require 'partials/footer.php' ?>
 
     <?php include 'partials/infowindow/right-modal.php' ?>
 
