@@ -38,7 +38,7 @@
   </head>
   <body>
 
-    <?php require 'partials/header.php' ?>
+    <?php require('partials/header.php') ?>
 
     <div class="page-content">
 
@@ -64,11 +64,11 @@
     </div>
     </div>
 
-    <?php require 'partials/footer.php' ?>
+    <?php require('partials/footer.php') ?>
 
-    <?php include 'partials/infowindow/right-modal.php' ?>
+    <?php include ('partials/infowindow/right-modal.php') ?>
 
-    <?php include 'partials/infowindow/left-modal.php' ?>
+    <?php include ('partials/infowindow/left-modal.php') ?>
 
     </div>
 
