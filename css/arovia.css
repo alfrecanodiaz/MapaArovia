@@ -3,7 +3,6 @@ body {
 }
 
 body, p {
-    /*font-family: 'Raleway', serif;*/
     font-family: "Open Sans",sans-serif;
     font-size: 14px;
 }
@@ -59,7 +58,6 @@ footer p {
 }
 #map {
     width: 100%;
-    /*height: 600px;*/
     height: 100vh;
     min-height:100vh;
     max-height: 100vh;
@@ -147,12 +145,8 @@ nav.navbar-findcond button.navbar-toggle:hover {
 
 .modal.left .modal-body,
 .modal.right .modal-body {
-    /*padding: 15px 15px 80px;*/
-    /*padding: 5px 5px 25px;*/
     padding: 5px 5px 5px;
-    /*padding: 0 15px 15px;*/
 }
-
 
 /*Left*/
 .modal.left.fade .modal-dialog{
@@ -242,7 +236,6 @@ nav.navbar-findcond button.navbar-toggle:hover {
     overflow-x: hidden;
 }
 #infoMapLeft .modal-header {
-    /*background: rgb(247, 247, 247) !important;*/
     background: #346366 !important;
     min-width: 433px;
     max-width: 433px;
@@ -257,8 +250,6 @@ nav.navbar-findcond button.navbar-toggle:hover {
 
 .leftmodal-body-subtitle {
     text-align: left;
-    /*border-top: 1px #346366 solid;
-    border-bottom: 1px #346366 solid;*/
     padding: 0.7rem;
     background: rgb(247, 247, 247) !important;
     color: #346366 !important;
@@ -566,7 +557,6 @@ nav.navbar-findcond button.navbar-toggle:hover {
     font-size: 10px;
     border-top: 0.5em solid rgba(0, 0, 0, 0.2);
     border-right: 0.5em solid rgba(0, 0, 0, 0.2);
-    /*border-bottom: 0.5em solid #346366 !important;*/
     border-bottom: 0.5em solid #1A1108 !important;
     border-left: 0.5em solid rgba(0, 0, 0, 0.2);
     -webkit-animation:spin 2s linear infinite;
@@ -582,7 +572,6 @@ nav.navbar-findcond button.navbar-toggle:hover {
 }
 
 .map-slider-loading-label {
-    /*color: #aaaaaa;*/
     color: #1A1108;
     font-weight: 500;
     position: absolute;
