@@ -4,7 +4,6 @@
     <list default="true" id="ae09edab-e8aa-4ce8-b650-7a89188c0c2e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="$PROJECT_DIR$/../arovia/.tmp/" />
     <ignored path="$PROJECT_DIR$/../arovia/temp/" />
@@ -306,12 +305,12 @@
       <workItem from="1491055718129" duration="13000" />
       <workItem from="1491270512472" duration="1353000" />
       <workItem from="1491353188277" duration="48000" />
-      <workItem from="1491433374848" duration="1335000" />
+      <workItem from="1491433374848" duration="1398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138033000" />
+    <option name="totallyTimeSpent" value="138096000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
